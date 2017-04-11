@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="myplay.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #mybox{
+            width: 400px;
+            height: 200px;
+            position: relative;
+            z-index: 12;
+            margin: 0 auto;
+        }
+        img{
+            width: 400px;
+            height: 200px;
+            
+        }
+        #mybox ul li {
+            float: left;
+            list-style: none;
+        }
+        span{
+            display: block;
+            width: 10px;
+            height: 10px;
+            border: 1px solid;
+            float: left;
+
+        }
+        #aa{
+            position: absolute;
+            bottom: 25px;
+            right: 0;
+            z-index: 100;
+            
+        }
+        #aa span{
+        	display: inline-block;
+        	border-radius: 50%;
+        	margin-right: 3px;
+        	border: none;
+        	background: #b7b7b7;
+        }
+        button{
+        	width: 30px;
+        	height: 40px;
+        	border: none;
+        	border-radius: 20%;
+        	position: absolute;
+        	opacity: 0.3;
+        	margin-top: -20px;
+        	background: #ccc;
+        	display: none;
+        }
+        #fl{
+        	right: 2%;
+        	top: 50%;
+        	
+        }
+        #fr{
+        	left: 2%;
+        	top: 50%;
+        }
+        #aa .index{
+            background: #ff4400;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="mybox">
+        <ul>
+            <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1491541463233&di=43d4f9aa306f2eceb936f5a807c7dcf5&imgtype=0&src=http%3A%2F%2Fi1.sanwen8.cn%2Fdoc%2F1609%2F852-160912105Q2I6.jpg" alt=""></li>
+            <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1491541490780&di=f78abd1f718feaab8b7617dd6fc5bf91&imgtype=0&src=http%3A%2F%2Fdesk.fd.zol-img.com.cn%2Ft_s960x600c5%2Fg3%2FM0A%2F0F%2F09%2FCg-4WFRplp2IYqiNACQ0TQPPChQAARbPQEM84oAJDRl464.jpg" alt=""></li>
+            <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1491541490780&di=85a29ce63dd229a3ace710b5d70e72b9&imgtype=0&src=http%3A%2F%2Fsoft.luobou.com%2Fbizhi%2Ffengjing%2F1473141512150.jpg" alt=""></li>
+            <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1491541490773&di=f01de297f29cddca9ca06b09354a5495&imgtype=0&src=http%3A%2F%2Ft1.niutuku.com%2F190%2F14%2F14-117639.jpg" alt=""></li>
+            <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1491541545026&di=2eaa374d5fc2424c0ad5ff3ae71110e9&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F12%2F92%2F90%2F22K58PICUsY.jpg" alt=""></li>
+        </ul>
+        <div id="aa"></div>
+        <button id="fl">></button>
+        <button id="fr"><</button>
+    </div>
+</body>
+<script>
+    var mybox = document.getElementById('mybox');
+    var aa = document.getElementById('aa');
+    var fl = document.getElementById('fl');
+    var fr = document.getElementById('fr');
+    new myplay(mybox,fl,fr,aa);
+</script>
+</html>
